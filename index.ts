@@ -112,7 +112,7 @@ const deployment = new k8s.apps.v1.Deployment(name,
                     containers: [
                         {
                             name: name,
-                            image: "ruchi672/departmentmicroservice:latestruchi672/todo-microservice:latest",
+                            image: "ruchi672/todo-microservice:latest",
                             ports: [{ name: "http", containerPort: 8080 }],
                         },
                     ],
