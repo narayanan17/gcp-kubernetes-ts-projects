@@ -113,7 +113,7 @@ const deployment = new k8s.apps.v1.Deployment(name,
                         {
                             name: name,
                             image: "ruchi672/departmentmicroservice:latest",
-                            ports: [{ name: "http", containerPort: 80 }],
+                            ports: [{ name: "http", containerPort: 8080 }],
                         },
                     ],
                 },
