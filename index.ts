@@ -96,7 +96,6 @@ export const clusterMasterIP = cluster.endpoint;
 
 // Create a NGINX Deployment
 const appLabels = { appClass: name };
-/* - Start
 const deployment = new k8s.apps.v1.Deployment(name,
     {
         metadata: {
@@ -151,4 +150,4 @@ const service = new k8s.core.v1.Service(name,
 // Export the Service name and public LoadBalancer endpoint
 export const serviceName = service.metadata.name;
 export const servicePublicIP = service.status.loadBalancer.ingress[0].ip;
-- End */ 
+
