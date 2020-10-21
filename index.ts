@@ -92,7 +92,7 @@ const ns = new k8s.core.v1.Namespace(name, {}, { provider: clusterProvider });
 
 // Export the Namespace name
 export const namespaceName = ns.metadata.name;
-
+export const clusterMasterIP = cluster.endpoint;
 
 // Create a NGINX Deployment
 const appLabels = { appClass: name };
@@ -129,7 +129,7 @@ const deployment = new k8s.apps.v1.Deployment(name,
 
 // Export the Deployment name
 export const deploymentName = deployment.metadata.name;
-- End */ 
+
 // Create a LoadBalancer Service for the NGINX Deployment
 const service = new k8s.core.v1.Service(name,
     {
@@ -151,3 +151,4 @@ const service = new k8s.core.v1.Service(name,
 // Export the Service name and public LoadBalancer endpoint
 export const serviceName = service.metadata.name;
 export const servicePublicIP = service.status.loadBalancer.ingress[0].ip;
+- End */ 
